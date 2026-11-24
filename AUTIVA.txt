@@ -1,0 +1,100 @@
+AUTIVA — CONTEXTO DEL PRODUCTO
+Proyecto móvil personal. Documento original: 23 de noviembre de 2026.
+Organización documental: 24 de noviembre de 2026, spec 002.
+
+1. PROPÓSITO Y DATOS DECLARADOS
+
+Nombre: AUTIVA.
+Categoría: productividad y organización personal.
+Plataforma: Android; desarrollo en Android Studio con Kotlin y Jetpack Compose.
+Idioma previsto: español.
+
+AUTIVA busca reunir proyectos, actividades académicas, tareas y hábitos.
+Su propósito es facilitar la planificación del tiempo, fomentar la constancia
+y ayudar a transformar ideas y responsabilidades en objetivos alcanzables,
+mediante planificación y seguimiento del progreso.
+
+Este archivo expresa contexto e intención, no certifica funcionalidades
+implementadas. La spec aprobada delimita cada tarea; no asumir que cualquier
+idea aquí descrita está autorizada para implementación.
+
+2. ÁREAS FUNCIONALES PREVISTAS — NO AUDITADAS
+
+- Proyectos: organización de metas y actividades.
+- Estudio: planificación de actividades académicas.
+- Tareas: organización del trabajo y responsabilidades.
+- Hábitos: constancia y seguimiento del avance.
+- Objetivos, cronogramas y visualización del progreso son ideas generales;
+  su comportamiento, prioridad y criterios se definirán en futuras specs.
+
+3. PÚBLICO E IDENTIDAD — PROPUESTAS POR CONFIRMAR
+
+Público propuesto: estudiantes, profesionales y personas con metas que desean
+mejorar voluntariamente su organización. Segmentación final pendiente.
+Personalidad deseada: moderna, dinámica, intuitiva y motivadora.
+
+Frases conservadas del documento original, sin elegir eslogan definitivo:
+- Organiza tu tiempo, activa tus metas.
+- Cada día cuenta, cada meta importa.
+- Tu tiempo. Tu progreso. Tu futuro.
+- Todo tu progreso en un solo lugar.
+
+Ideas de color, no una paleta aprobada:
+- Principal naranja; fondos blanco/negro como propuesta.
+- Posible color adicional: #36C9A0.
+
+Ícono: el original señalaba «no tomar en cuenta» antes de una A con flecha
+ascendente o marca de verificación. Se conserva solo como referencia no activa;
+no usar como requisito ni diseñarlo sin confirmación.
+
+Acrónimo original, pendiente de unificación:
+A: Administración; U: Unidad; T: Tiempo; I: Inteligencia; V: Vida; A: Avance.
+Expansión propuesta: Administración Unitaria del Tiempo Inteligente para la
+Vida y el Avance. Las palabras no coinciden literalmente con toda la lista.
+
+Alternativa en inglés conservada como propuesta:
+Achieve, Understand, Track, Improve, Visualize, Accomplish.
+Alcanzar, comprender, hacer seguimiento, mejorar, visualizar y cumplir.
+
+4. CONFIGURACIÓN OBSERVADA — NO EQUIVALE A PRUEBAS
+
+Fuentes: AUTIVA/settings.gradle.kts, AUTIVA/app/build.gradle.kts,
+AUTIVA/gradle/libs.versions.toml y configuración del Gradle Wrapper.
+- Proyecto AUTIVA; módulo :app; Compose habilitado y Material 3 declarado.
+- minSdk 24 (Android 7.0); targetSdk 37; compileSdk 37.
+- AGP 9.5.2; plugin Compose Kotlin 2.2.10; BOM Compose 2026.02.01.
+- Gradle Wrapper 9.6.0; compatibilidad fuente/destino Java declarada: 11.
+  Esta última no determina el JDK necesario para ejecutar Gradle y AGP.
+- No se compiló, ejecutó ni auditó el código de la aplicación en esta tarea.
+
+Discrepancia pendiente: el objetivo previo de Android 6.0/API 23 difiere de
+minSdk 24. Decidir si conservar el mínimo actual o evaluar soporte API 23;
+no cambiar Gradle ni prometer Android 6.0 sin aprobación y validación.
+
+5. CONSEJOS GENERALES — MANTENIMIENTO CON EVIDENCIA
+
+Revisar esta zona al cerrar tareas autorizadas con cambios persistentes.
+No actualizarla automáticamente durante análisis. Mantener identificadores,
+estado y evidencia breve; marcar completado solo el resultado realmente logrado.
+
+PENDIENTES
+- C-01: definir un MVP pequeño y priorizar las cuatro áreas antes de desarrollar
+  todas a la vez. No hay MVP aprobado todavía.
+- C-02: resolver compatibilidad API 23/API 24 y luego verificar herramientas,
+  tareas Gradle y funcionamiento en dispositivos representativos.
+- C-03: acordar el modelo de datos y necesidades de almacenamiento, privacidad,
+  recuperación y eventual sincronización antes de incorporar esas funciones.
+  No presupone cuentas, backend, nube ni servicios de terceros.
+- C-04: elegir eslogan, acrónimo y paleta definitiva; comprobar accesibilidad
+  y legibilidad. La propuesta visual no es una orden de implementación.
+- C-05: verificar código y pruebas solo con autorización; documentar convenciones
+  reales y cubrir lógica, estados de UI y fallos relevantes según el alcance.
+- C-06: antes de tocar código, confirmar respaldo/checkpoint. El entorno indicó
+  que la raíz no es un repositorio Git; no se inicializó ni publicó ninguno.
+- C-07: antes de publicar en GitHub, revisar archivos versionables, exclusión
+  de secretos/datos locales y licencia. No hay autorización para publicar.
+
+COMPLETADOS
+- C-08: adaptación documental Android y README creados mediante spec 002.
+  Evidencia: AGENTS.md, docs/constitution.md y README.md. No implica auditoría
+  ni cambios funcionales en la aplicación.

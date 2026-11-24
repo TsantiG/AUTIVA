@@ -1,0 +1,61 @@
+GUÍA DE TRABAJO — AUTIVA / OpenCode V2
+Actualizada mediante spec 002 el 24 de noviembre de 2026.
+
+1. CONTEXTO Y ACCESO
+   AGENTS.md define el procedimiento; docs/constitution.md contiene las reglas
+   permanentes; MEMORY.md resume el estado y AUTIVA.txt el contexto del producto.
+   Leer primero constitución y memoria. No confundir ideas con funciones terminadas.
+   Se autoriza consulta limitada de configuración Android necesaria; pedir permiso
+   antes de leer código o recursos de implementación o ampliar el análisis.
+
+2. FLUJO RECOMENDADO
+   /feature describir funcionalidad -> plan en conversación, sin escritura.
+   /qa-plan -> QA previo con Sol en la misma sesión, antes de aprobación y spec.
+   Si ya se usa Sol, cargar spec-qa y revisar aquí; no abrir agentes para repetirlo.
+   Resolver decisiones, aprobar el plan final e indicar NNN de specs/NNN/spec.md.
+   Cambiar a Build para escribir; crear la spec aprobada una vez y verificarla.
+   Antes de tocar código, confirmar checkpoint Git o una alternativa/excepción
+   explícita si no existe Git. Una tarea solo documental no exige checkpoint.
+   Implementar únicamente el alcance aprobado, validar y comunicar resultados reales.
+   Actualizar memoria y consejos al cerrar cambios autorizados, con evidencia.
+
+3. MODELOS Y CONSUMO
+   Preferencias del proyecto: Luna #medium para planear; Sol #medium para QA y Build.
+   IDs completos y configuración: AGENTS.md y opencode.jsonc.
+   Los comandos locales declaran sus modelos; una skill no cambia el modelo.
+   Cambiar de agente no garantiza sustituir el modelo guardado en la sesión:
+   comprobar la selección visible y no afirmar cambios no realizados.
+   Si falta el modelo requerido, informar y pedir alternativa.
+   Consultar precios y disponibilidad actuales del proveedor; no hay una tarifa
+   permanente ni garantía de ahorro o calidad. Evitar repetir contexto y QA completos
+   por rutina; elevar razonamiento según complejidad y riesgo, no automáticamente.
+
+4. ANDROID
+   El proyecto Gradle está en AUTIVA/, no en la raíz documental.
+   No hay comandos de compilación/pruebas ejecutados y verificados en esta tarea.
+   Usar el Wrapper solo tras comprobar requisitos, tareas y autorización aplicable.
+   minSdk observado: 24 (Android 7.0); objetivo previo: Android 6.0/API 23.
+   Resolver esa diferencia antes de cambiar compatibilidad o anunciar soporte API 23.
+   No subir dependencias, cambiar SDK ni incorporar arquitectura o servicios sin plan.
+   No leer local.properties, claves de firma ni credenciales para completar contexto.
+   Ver AGENTS.md para exclusiones de generados y validaciones según el cambio.
+
+5. CONFIGURACIÓN E INTEGRACIONES
+   opencode.jsonc mantiene Plan como agente predeterminado; modelos sin cambios.
+   Los ejemplos MCP/plugin permanecen comentados; no se instaló ni activó ninguno.
+   Cargar la skill opencode y consultar documentación oficial V2 antes de cambiar
+   configuración, comandos o integraciones. No copiar ejemplos como requisitos.
+   Añadir solo herramientas necesarias y autorizadas; revisar procedencia, versiones,
+   permisos y tratamiento de datos. Nunca guardar tokens ni API keys en texto literal.
+   Los filtros de búsqueda y watcher no impiden por sí solos lecturas del agente.
+   No habilitar skills externas sin revisar instrucciones y procedencia.
+
+6. PUBLICACIÓN Y PRÓXIMOS PASOS
+   README.md contiene la presentación básica, no un manual de instalación comprobado.
+   Publicar en GitHub es una acción aparte y requiere autorización: revisar secretos,
+   archivos locales y licencia antes de hacerlo. No se inicializó ni publicó Git.
+   Los consejos de producto pendientes/completados se mantienen en AUTIVA.txt.
+
+FUENTES OFICIALES CONTRASTADAS EN ESTA TAREA
+https://opencode.ai/v2/docs/config
+https://opencode.ai/v2/docs/agents
